@@ -12,3 +12,9 @@ Goals for Week 1:
 - Observed that stack addresses are high and heap addresses are lower
 - Freed heap memory correctly
 - Verified no memory leaks using Valgrind
+
+ ## Day 3 — Dangling Pointers & Undefined Behavior
+- Observed different values when reading freed memory
+- Learned that undefined behavior may appear to “work”
+- Valgrind reliably detects invalid reads
+- Nullifying the pointer is a good practice, it makes bugs easier to catch

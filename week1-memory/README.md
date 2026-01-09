@@ -18,3 +18,24 @@ Goals for Week 1:
 - Learned that undefined behavior may appear to “work”
 - Valgrind reliably detects invalid reads
 - Nullifying the pointer is a good practice, it makes bugs easier to catch
+
+ ## Day 4 — Double Free, NULL Safety & Segmentation Faults
+
+- Experimented with **double free** and observed program crash:
+  - free doesn't change where the pointer is pointing, it still points to the allocated memory
+  - `free()` called twice caused: `double free detected in tcache 2`
+  - Program aborted to protect memory integrity
+- Learned that **free(NULL)** is safe and prevents crashes
+- Triggered a **segmentation fault** by dereferencing a NULL pointer
+- Valgrind confirmed invalid frees and memory errors
+- Key takeaway: Always **nullify pointers after freeing** to prevent undefined behavior
+
+ ## Day 5 — Memory Leaks & Losing Heap Ownership
+
+- Demonstrated memory leak by losing pointer to allocated memory
+- Valgrind detected 1 “definitely lost” block
+- Fixed leak by keeping separate pointers and freeing all allocated memory
+- Key takeaway: Always **track heap pointers** and free every allocation
+- additional: valgrind outputs 3 allocs used, 2 free used eventhough we only used 2 allocs and 1 free
+               - it's because of printf function which also allocates heap memory
+

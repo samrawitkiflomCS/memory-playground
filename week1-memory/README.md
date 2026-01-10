@@ -39,3 +39,14 @@ Goals for Week 1:
 - additional: valgrind outputs 3 allocs used, 2 free used eventhough we only used 2 allocs and 1 free
                - it's because of printf function which also allocates heap memory
 
+ ## Day 6 — Dynamic Memory & Pointer Arithmetic
+
+- Practiced dynamic arrays with malloc and realloc
+   **realloc resizes heap memory and has three possible outcomes:
+    In-place resize → pointer unchanged
+    Moved block → pointer changes
+    Failure → returns NULL, old pointer still valid
+- Initialized and resized heap memory safely
+- Used pointer arithmetic to access array elements
+- Freed all allocated memory and nullified pointers
+- Valgrind confirmed zero leaks or invalid accesses

@@ -50,3 +50,10 @@ Goals for Week 1:
 - Used pointer arithmetic to access array elements
 - Freed all allocated memory and nullified pointers
 - Valgrind confirmed zero leaks or invalid accesses
+ ## Day 7 — Memory Ownership & Function Boundaries
+
+- Learned ownership rules in C
+- Practiced allocating memory in one function and freeing in another
+- Avoided double free and dangling pointers across function calls
+- Used clear ownership transfer conventions
+- Verified correctness with Valgrind

@@ -42,11 +42,11 @@ Goals for Week 1:
  ## Day 6 — Dynamic Memory & Pointer Arithmetic
 
 - Practiced dynamic arrays with malloc and realloc
-   **realloc resizes heap memory and has three possible outcomes:
-    -In-place resize → pointer unchanged
-    -Moved block → pointer changes
-      -old block is freed automatically
-    -Failure → returns NULL, old pointer still valid
+- realloc resizes heap memory and has three possible outcomes:
+    - In-place resize → pointer unchanged
+    - Moved block → pointer changes
+      - old block is freed automatically
+    - Failure → returns NULL, old pointer still valid
 - Initialized and resized heap memory safely
 - Used pointer arithmetic to access array elements
 - Freed all allocated memory and nullified pointers

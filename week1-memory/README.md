@@ -43,9 +43,10 @@ Goals for Week 1:
 
 - Practiced dynamic arrays with malloc and realloc
    **realloc resizes heap memory and has three possible outcomes:
-    In-place resize → pointer unchanged
-    Moved block → pointer changes
-    Failure → returns NULL, old pointer still valid
+    -In-place resize → pointer unchanged
+    -Moved block → pointer changes
+      -old block is freed automatically
+    -Failure → returns NULL, old pointer still valid
 - Initialized and resized heap memory safely
 - Used pointer arithmetic to access array elements
 - Freed all allocated memory and nullified pointers
